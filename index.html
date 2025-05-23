@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kansanmurha 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f8f9fa;
+        color: #212529;
+      }
+      .header-title {
+        color: #c00000; /* Striking red for the main title */
+      }
+      .recognition-status-section {
+        text-align: center;
+        margin-top: 2rem; /* mt-8 */
+        margin-bottom: 3rem; /* mb-12 */
+        padding: 1.5rem; /* p-6 */
+        background-color: #ffffff; /* bg-white */
+        border-radius: 0.5rem; /* rounded-lg */
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+      }
+      .recognition-question {
+        font-size: 1.25rem; /* text-xl */
+        font-weight: 500; /* font-medium */
+        color: #374151; /* text-gray-700 */
+        margin-bottom: 1rem; /* mb-4 */
+      }
+      .status-text {
+        font-size: 4.5rem; /* text-7xl or larger */
+        font-weight: 800; /* font-extrabold */
+        line-height: 1;
+      }
+      .status-no {
+        color: #ef4444; /* text-red-500 */
+      }
+      .status-yes {
+        color: #10b981; /* text-green-600 */
+      }
+
+      .list-header {
+        display: flex;
+        justify-content: flex-end; /* Aligns the text to the right */
+        padding: 0.5rem 1rem; /* py-2 px-4, adjust to align with buttons */
+        font-size: 0.75rem; /* text-xs */
+        font-weight: 600; /* font-semibold */
+        color: #4b5563; /* text-gray-600 */
+        text-transform: uppercase;
+        letter-spacing: 0.05em; /* tracking-wider */
+        background-color: #f9fafb; /* bg-gray-50 - optional, for slight distinction */
+        border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
+      }
+      .list-header .header-text-placeholder {
+        /* Placeholder to balance the flex layout if needed */
+        flex-grow: 1;
+      }
+
+      .list-item {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 1rem; /* py-3 px-4 */
+        border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
+        transition: background-color 0.2s ease-in-out;
+      }
+      .list-item:hover {
+        background-color: #f3f4f6; /* hover:bg-gray-100 */
+      }
+      .list-item:last-child {
+        border-bottom: none;
+      }
+      .item-info {
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .item-text-block {
+        /* Wrapper for name and details/district */
+      }
+      .item-name {
+        font-weight: 500; /* font-medium */
+      }
+      .item-details {
+        font-size: 0.875rem; /* text-sm */
+        color: #4b5563; /* text-gray-600 */
+        margin-left: 1rem; /* ml-4 */
+      }
+      .item-district {
+        font-size: 0.875rem; /* text-sm */
+        color: #4b5563; /* text-gray-600 */
+        margin-left: 0.5rem; /* ml-2 */
+      }
+      .stance-button {
+        padding: 0.375rem 0.75rem; /* py-1.5 px-3 */
+        border-radius: 0.375rem; /* rounded-md */
+        font-size: 0.875rem; /* text-sm */
+        font-weight: 600; /* font-semibold */
+        text-align: center;
+        min-width: 110px;
+        cursor: default;
+        flex-shrink: 0;
+      }
+      .kannatan-btn {
+        background-color: #10b981; /* bg-green-600 */
+        color: white;
+        border: 1px solid #059669; /* border-green-700 */
+      }
+      .en-kannata-btn {
+        background-color: #ef4444; /* bg-red-500 */
+        color: white;
+        border: 1px solid #dc2626; /* border-red-600 */
+      }
+      .section-title {
+        font-size: 1.5rem; /* text-2xl */
+        font-weight: 600; /* font-semibold */
+        margin-top: 2rem; /* mt-8 */
+        margin-bottom: 1rem; /* mb-4 */
+        padding-bottom: 0.5rem; /* pb-2 */
+        border-bottom: 2px solid #d1d5db; /* border-b-2 border-gray-300 */
+      }
+      .subsection-title {
+        font-size: 1.25rem; /* text-xl */
+        font-weight: 500; /* font-medium */
+        margin-top: 1.5rem; /* mt-6 */
+        margin-bottom: 0.75rem; /* mb-3 */
+        color: #1f2937; /* text-gray-800 */
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+      <h1
+        class="text-3xl sm:text-4xl md:text-5xl font-bold text-center header-title my-6"
+      >
+        VUODEN 2025 PALESTIINALAISTEN KANSANMURHAN AIKANA HALLITUKSESSA OLLEET
+        KANSANEDUSTAJAT JA HEIDÄN KANTANSA PALESTIINAN VALTION TUNNUSTAMISEEN
+      </h1>
+
+      <p
+        class="text-base sm:text-lg md:text-xl text-center text-gray-700 mb-12 leading-relaxed"
+      >
+        Tämä verkkosivu toimii pysyvänä muistutuksena ja luettelona niistä
+        kansanedustajista, jotka istuivat maamme hallituksessa Israelin vuonna
+        2025 toteuttaman palestiinalaisten kansanmurhan aikana. Sen
+        tarkoituksena on palvella myös helposti löydettävänä refenssinä
+        äänestäjille siitä, kummalle puolelle historiaa kukin edustajista haluaa
+        lopulta nimensä kirjoitettavan kansanmurhan ja Palestiinan valtion
+        tunnustamisen suhteen. Tämän tekstin kirjoitushetkellä (23.5.2025)
+        Israel on avoimesti myöntänyt aikovansa tappaa tai pakkosiirtää kaikki
+        Gazan palestiinalaiset. Se on kiistämätön etninen puhdistus ja
+        sotarikos, joka vertautuu täsmällisesti Natsi-Saksan toimiin toisen
+        maailmansodan aikana.
+        <br /><br />
+        Palestiinan valtion tunnustaminen on yksi Suomelle mahdollinen,
+        merkittävä ja symbolisestikin tärkeä vaikuttamisen keino ja osoitus
+        Israelille, ettei Suomi hyväksy kansanmurhaa. Kolme neljäsosaa maailman
+        valtioista on tunnustanut Palestiinan, mukaanlukien naapurimme Ruotsi ja
+        Norja. Suomen hallitus ei ole tekstin kirjoitushetkellä ja vallitsevasta
+        tilanteesta huolimatta ollut valmis tunnustamaan Palestiinan valtiota.
+        Se on korkeintaan pitänyt sitä epämääräisenä mahdollisuutena
+        tulevaisuudessa. Tämän vuoksi jokainen hallituspuolueen kansanedustaja
+        on lähtökohtaisesti merkitty tunnisteella "Ei kannata", mikä viittaa
+        kyseisen edustajan halukkuuteen tunnustaa Palestiinan valtio.
+        <br /><br />
+        Mikäli olet listalla näkyvä kansanedustaja ja haluat tunnisteen
+        muutettavan muotoon "Kannatan", tee julkinen kannanotto, jossa vaaditaan
+        välitöntä Palestiinan valtion tunnustamista ja ilmoita siitä lähteineen
+        sähköpostiosoitteeseen kansanmurha@proton.me.
+      </p>
+
+      <section class="recognition-status-section">
+        <p class="recognition-question">
+          Suomi on tunnustanut Palestiinan valtion:
+        </p>
+        <div class="status-text status-no">EI</div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Ministerit</h2>
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <div class="list-header">
+            <span class="header-text-placeholder"></span>
+            <span>Palestiinan valtion tunnustaminen</span>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Pääministeri Petteri Orpo</span
+                ><span class="item-details">(kok)</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Opetusministeri Anders Adlercreutz</span
+                ><span class="item-details">(r)</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name"
+                  >Liikunta-, urheilu- ja nuorisoministeri Sandra
+                  Bergqvist</span
+                ><span class="item-details">(r)</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name"
+                  >Maa- ja metsätalousministeri Sari Essayah</span
+                ><span class="item-details">(kd)</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name"
+                  >Sosiaaliturvaministeri Sanni Grahn-Laasonen</span
+                ><span class="item-details">(kok)</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Puolustusministeri Antti Häkkänen</span
+                ><span class="item-details">(kok)</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name"
+                  >Kunta- ja alueministeri Anna-Kaisa Ikonen</span
+                ><span class="item-details">(kok)</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name"
+                  >Sosiaali- ja terveysministeri Kaisa Juuso</span
+                ><span class="item-details">(ps)</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Työministeri Matias Marttinen</span
+                ><span class="item-details">(kok)</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Oikeusministeri Leena Meri</span
+                ><span class="item-details">(ps)</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name"
+                  >Ympäristö- ja ilmastoministeri Sari Multala</span
+                ><span class="item-details">(kok)</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Valtiovarainministeri Riikka Purra</span
+                ><span class="item-details">(ps)</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name"
+                  >Liikenne- ja viestintäministeri Lulu Ranne</span
+                ><span class="item-details">(ps)</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Sisäministeri Mari Rantanen</span
+                ><span class="item-details">(ps)</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Elinkeinoministeri Wille Rydman</span
+                ><span class="item-details">(ps)</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name"
+                  >Eurooppa- ja omistajaohjausministeri Joakim Strand</span
+                ><span class="item-details">(r)</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name"
+                  >Tiede- ja kulttuuriministeri Mari-Leena Talvitie</span
+                ><span class="item-details">(kok)</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name"
+                  >Ulkomaankauppa- ja kehitysministeri Ville Tavio</span
+                ><span class="item-details">(ps)</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Ulkoministeri Elina Valtonen</span
+                ><span class="item-details">(kok)</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Rivikansanedustajat</h2>
+
+        <h3 class="subsection-title">Kokoomuksen eduskuntaryhmä</h3>
+        <div class="bg-white shadow-md rounded-lg overflow-hidden mb-6">
+          <div class="list-header">
+            <span class="header-text-placeholder"></span>
+            <span>Palestiinan valtion tunnustaminen</span>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Pauli Aalto-Setälä</span
+                ><span class="item-district">Varsinais-Suomen vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Heikki Autto</span
+                ><span class="item-district">Lapin vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Maaret Castrén</span
+                ><span class="item-district">Helsingin vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Markku Eestilä</span
+                ><span class="item-district">Savo-Karjalan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Noora Fagerström</span
+                ><span class="item-district">Uudenmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Janne Heikkinen</span
+                ><span class="item-district">Oulun vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Timo Heinonen</span
+                ><span class="item-district">Hämeen vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Juha Hänninen</span
+                ><span class="item-district">Oulun vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Janne Jukkola</span
+                ><span class="item-district">Vaasan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Aleksi Jäntti</span
+                ><span class="item-district">Pirkanmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Atte Kaleva</span
+                ><span class="item-district">Helsingin vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Pia Kauma</span
+                ><span class="item-district">Uudenmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Ville Kaunisto</span
+                ><span class="item-district">Kaakkois-Suomen vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Mari Kaunistola</span
+                ><span class="item-district">Satakunnan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Pihla Keto-Huovinen</span
+                ><span class="item-district">Uudenmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Marko Kilpi</span
+                ><span class="item-district">Savo-Karjalan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Teemu Kinnari</span
+                ><span class="item-district">Hämeen vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Pauli Kiuru</span
+                ><span class="item-district">Pirkanmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Jukka Kopra</span
+                ><span class="item-district">Kaakkois-Suomen vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Terhi Koulumies</span
+                ><span class="item-district">Helsingin vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Milla Lahdenperä</span
+                ><span class="item-district">Varsinais-Suomen vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Mia Laiho</span
+                ><span class="item-district">Uudenmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Jarno Limnell</span
+                ><span class="item-district">Uudenmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Jarmo Lindberg</span
+                ><span class="item-district">Helsingin vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Martin Paasi</span
+                ><span class="item-district">Uudenmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Karoliina Partanen</span
+                ><span class="item-district">Savo-Karjalan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Susanne Päivärinta</span
+                ><span class="item-district">Uudenmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Paula Risikko</span
+                ><span class="item-district">Vaasan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Tere Sammallahti</span
+                ><span class="item-district">Uudenmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Sari Sarkomaa</span
+                ><span class="item-district">Helsingin vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Arto Satonen</span
+                ><span class="item-district">Pirkanmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Saara-Sofia Sirén</span
+                ><span class="item-district">Varsinais-Suomen vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Ville Valkonen</span
+                ><span class="item-district">Varsinais-Suomen vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Oskari Valtola</span
+                ><span class="item-district">Kaakkois-Suomen vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Heikki Vestman</span
+                ><span class="item-district">Uudenmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Sofia Vikman</span
+                ><span class="item-district">Pirkanmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Henrik Vuornos</span
+                ><span class="item-district">Uudenmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Ville Väyrynen</span
+                ><span class="item-district">Keski-Suomen vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Sinuhe Wallinheimo</span
+                ><span class="item-district">Keski-Suomen vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Ben Zyskowicz</span
+                ><span class="item-district">Helsingin vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="subsection-title">Perussuomalaisten eduskuntaryhmä</h3>
+        <div class="bg-white shadow-md rounded-lg overflow-hidden mb-6">
+          <div class="list-header">
+            <span class="header-text-placeholder"></span>
+            <span>Palestiinan valtion tunnustaminen</span>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Pekka Aittakumpu</span
+                ><span class="item-district">Oulun vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Sanna Antikainen</span
+                ><span class="item-district">Savo-Karjalan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Miko Bergbom</span
+                ><span class="item-district">Pirkanmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Juho Eerola</span
+                ><span class="item-district">Kaakkois-Suomen vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Ritva Elomaa</span
+                ><span class="item-district">Varsinais-Suomen vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Kaisa Garedew</span
+                ><span class="item-district">Keski-Suomen vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Jussi Halla-aho</span
+                ><span class="item-district">Helsingin vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Laura Huhtasaari</span
+                ><span class="item-district">Satakunnan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Petri Huru</span
+                ><span class="item-district">Satakunnan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Tomi Immonen</span
+                ><span class="item-district">Keski-Suomen vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Vilhelm Junnila</span
+                ><span class="item-district">Varsinais-Suomen vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Arja Juvonen</span
+                ><span class="item-district">Uudenmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Antti Kangas</span
+                ><span class="item-district">Oulun vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Teemu Keskisarja</span
+                ><span class="item-district">Uudenmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Ari Koponen</span
+                ><span class="item-district">Uudenmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Jari Koskela</span
+                ><span class="item-district">Satakunnan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Sheikki Laakso</span
+                ><span class="item-district">Kaakkois-Suomen vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Rami Lehtinen</span
+                ><span class="item-district">Hämeen vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Mikko Lundén</span
+                ><span class="item-district">Varsinais-Suomen vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Juha Mäenpää</span
+                ><span class="item-district">Vaasan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Jani Mäkelä</span
+                ><span class="item-district">Kaakkois-Suomen vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Veijo Niemi</span
+                ><span class="item-district">Pirkanmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Mira Nieminen</span
+                ><span class="item-district">Hämeen vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Mauri Peltokangas</span
+                ><span class="item-district">Vaasan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Jorma Piisinen</span
+                ><span class="item-district">Uudenmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Mikko Polvinen</span
+                ><span class="item-district">Oulun vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Sakari Puisto</span
+                ><span class="item-district">Pirkanmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Merja Rasinkangas</span
+                ><span class="item-district">Oulun vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Minna Reijonen</span
+                ><span class="item-district">Savo-Karjalan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Anne Rintamäki</span
+                ><span class="item-district">Vaasan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Jari Ronkainen</span
+                ><span class="item-district">Hämeen vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Onni Rostila</span
+                ><span class="item-district">Uudenmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Sami Savio</span
+                ><span class="item-district">Pirkanmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Sara Seppänen</span
+                ><span class="item-district">Lapin vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Pia Sillanpää</span
+                ><span class="item-district">Vaasan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Jenna Simula</span
+                ><span class="item-district">Oulun vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Jaana Strandman</span
+                ><span class="item-district">Kaakkois-Suomen vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Joakim Vigelius</span
+                ><span class="item-district">Pirkanmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Ville Vähämäki</span
+                ><span class="item-district">Oulun vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="subsection-title">Ruotsalainen eduskuntaryhmä</h3>
+        <div class="bg-white shadow-md rounded-lg overflow-hidden mb-6">
+          <div class="list-header">
+            <span class="header-text-placeholder"></span>
+            <span>Palestiinan valtion tunnustaminen</span>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Otto Andersson</span
+                ><span class="item-district">Uudenmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Eva Biaudet</span
+                ><span class="item-district">Helsingin vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Christoffer Ingo</span
+                ><span class="item-district">Vaasan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Mats Löfström</span
+                ><span class="item-district"
+                  >Ahvenanmaan maakunnan vaalipiiri</span
+                >
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Anders Norrback</span
+                ><span class="item-district">Vaasan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Mikko Ollikainen</span
+                ><span class="item-district">Vaasan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Henrik Wickström</span
+                ><span class="item-district">Uudenmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="subsection-title">
+          Kristillisdemokraattinen eduskuntaryhmä
+        </h3>
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <div class="list-header">
+            <span class="header-text-placeholder"></span>
+            <span>Palestiinan valtion tunnustaminen</span>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Mika Poutala</span
+                ><span class="item-district">Uudenmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Päivi Räsänen</span
+                ><span class="item-district">Hämeen vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Sari Tanus</span
+                ><span class="item-district">Pirkanmaan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="item-info">
+              <div class="item-text-block">
+                <span class="item-name">Peter Östman</span
+                ><span class="item-district">Vaasan vaalipiiri</span>
+              </div>
+              <span class="stance-button en-kannata-btn">En kannata</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="text-center py-8 mt-12 border-t border-gray-300">
+      <p class="text-sm text-gray-600">
+        &copy; <span id="year"></span> Muistutus. Kaikki oikeudet pidätetään.
+      </p>
+    </footer>
+
+    <script>
+      // Aseta vuosiluku alatunnisteeseen
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
